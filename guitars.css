@@ -1,0 +1,33 @@
+.guitars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  padding: 20px;
+}
+.guitars .guitar-container {
+  border: 2px solid inherit;
+  max-width: 300px;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 2px;
+          box-shadow: 0 0 0 2px;
+}
+.guitars .guitar-img {
+  max-width: 300px;
+  width: 100%;
+  min-height: 300px;
+  cursor: pointer;
+}
+.guitars h2,
+.guitars p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

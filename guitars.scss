@@ -1,0 +1,29 @@
+.guitars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  .guitar-container {
+    border: 2px solid inherit;
+    max-width: 300px;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px;
+  }
+  .guitar-img {
+    max-width: 300px;
+    width: 100%;
+    min-height: 300px;
+    cursor: pointer;
+  }
+
+  h2,
+  p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}
