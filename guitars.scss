@@ -1,9 +1,14 @@
+.logo {
+  text-align: center;
+}
+
 .guitars {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
   padding: 20px;
+
   .guitar-container {
     border: 2px solid inherit;
     max-width: 300px;
@@ -14,6 +19,7 @@
     cursor: pointer;
     box-shadow: 0 0 0 2px;
   }
+
   .guitar-img {
     max-width: 300px;
     width: 100%;
@@ -26,4 +32,77 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }
+}
+
+.map-img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.about-us-image {
+  width: 100%;
+}
+
+.about-us-content {
+  text-align: center;
+
+  p {
+    max-width: 655px;
+    width: 100%;
+    min-height: 87px;
+    margin: auto;
+  }
+}
+
+.shopping-icon {
+  font-size: 30px;
+  color: goldenrod;
+}
+
+.footer-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  font-size: 40px;
+  align-items: center;
+  background-color: #f8f9fa;
+  max-width: 2000px;
+  width: 100%;
+  min-height: 106px;
+
+  .facebook-icon:hover {
+    cursor: pointer;
+    color: blue;
+  }
+
+  .instagram-icon:hover {
+    cursor: pointer;
+    color: purple;
+  }
+
+  .twitter-icon :hover {
+    cursor: pointer;
+    color: lightblue;
+  }
+}
+
+.form {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+
+  // border: 2px solid;
+  .message-input {
+    min-height: 200px;
+  }
+}
+
+.send-msg-btn {
+  max-width: 100px;
+  width: 100%;
+  margin: auto;
 }

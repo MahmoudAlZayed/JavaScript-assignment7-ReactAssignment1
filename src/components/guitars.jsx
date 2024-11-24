@@ -2,27 +2,93 @@ import guitar1 from "../assets/Guitar1.jpg";
 import guitar2 from "../assets/guitar2.jpg";
 import guitar3 from "../assets/guitar3.jpg";
 import guitar4 from "../assets/guitar4.jpg";
-// import guitar5 from "../assets/guitar5.jpg";
 import guitar6 from "../assets/guitar6.jpg";
 import guitar7 from "../assets/guitar7.jpg";
 import guitar8 from "../assets/guitar8.jpg";
-import guitar9 from "../assets/guitar9.jpg";
+import { useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+import Button from "react-bootstrap/Button";
+
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import logo from "../assets/logo.png";
 
 import "/guitars.css";
 
 function Guitar(props) {
+  let [quantity1, setQuantity1] = useState(0);
+
+  const increment1 = () => {
+    setQuantity1(quantity1 + 1);
+  };
+  const decrement = () => {
+    if (quantity1 > 0) setQuantity1(quantity1 - 1);
+  };
+  const reset = () => {
+    if (quantity1 > 0) setQuantity1((quantity1 = 0));
+  };
+
   return (
     <>
+      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/">
+            <img src={logo} />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="about">about</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link eventKey={2} href="contact" to="/contact">
+                contact us
+              </Nav.Link>
+              <Nav.Link>
+                <p>
+                  <FaShoppingCart className="shopping-icon" />
+                  {quantity1}
+                </p>
+              </Nav.Link>
+              <Nav.Link>
+                <Button
+                  className="add-to-cart-btn"
+                  variant="dark"
+                  onClick={reset}
+                >
+                  empty cart{" "}
+                </Button>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
       <div className="guitars">
         <div className="guitar1-container guitar-container ">
           <img
             className="guitar1-img guitar-img"
             src={guitar1}
             alt="flamenco-guitar1"
-            target="_self"
           />
-          <h2 className="guitar1-brand">{props.guitar1Brand}</h2>
-          <p className="guitar1-price">{props.guitar1Price}</p>
+          <h2 className="guitar1-brand">ESTEVE 1F</h2>
+          <p className="guitar1-price">16000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar2-container guitar-container">
           <img
@@ -30,8 +96,22 @@ function Guitar(props) {
             src={guitar2}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar2-brand">{props.guitar2Brand}</h2>
-          <p className="guitar2-price">{props.guitar2Price}</p>
+          <h2 className="guitar2-brand">ESTEVE 2F</h2>
+          <p className="guitar2-price">15000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar3-container guitar-container">
           <img
@@ -39,8 +119,22 @@ function Guitar(props) {
             src={guitar3}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar3-brand">{props.guitar3Brand}</h2>
-          <p className="guitar3-price">{props.guitar3Price}</p>
+          <h2 className="guitar3-brand">ESTEVE 3F</h2>
+          <p className="guitar3-price">14000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar4-container guitar-container">
           <img
@@ -48,8 +142,22 @@ function Guitar(props) {
             src={guitar4}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar3-brand">{props.guitar4Brand}</h2>
-          <p className="guitar4-price">{props.guitar4Price}</p>
+          <h2 className="guitar3-brand">ESTEVE 4F</h2>
+          <p className="guitar4-price">13000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar8-container guitar-container">
           <img
@@ -57,8 +165,22 @@ function Guitar(props) {
             src={guitar8}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar8-brand">{props.guitar8Brand}</h2>
-          <p className="guitar8-price">{props.guitar8Price}</p>
+          <h2 className="guitar8-brand">ESTEVE 5F</h2>
+          <p className="guitar8-price">13000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar6-container guitar-container">
           <img
@@ -66,8 +188,22 @@ function Guitar(props) {
             src={guitar6}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar6-brand">{props.guitar6Brand}</h2>
-          <p className="guitar6-price">{props.guitar6Price}</p>
+          <h2 className="guitar6-brand">ESTEVE 6F</h2>
+          <p className="guitar6-price">12000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar7-container guitar-container">
           <img
@@ -75,8 +211,22 @@ function Guitar(props) {
             src={guitar7}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar7-brand">{props.guitar7Brand}</h2>
-          <p className="guitar7-price">{props.guitar7Price}</p>
+          <h2 className="guitar7-brand">ESTEVE 7F</h2>
+          <p className="guitar7-price">11000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
         <div className="guitar8-container guitar-container">
           <img
@@ -84,17 +234,22 @@ function Guitar(props) {
             src={guitar8}
             alt="flamenco-guitar2"
           />
-          <h2 className="guitar8-brand">{props.guitar8Brand}</h2>
-          <p className="guitar8-price">{props.guitar8Price}</p>
-        </div>
-        <div className="guitar9-container guitar-container">
-          <img
-            className="guitar9-img  guitar-img"
-            src={guitar9}
-            alt="flamenco-guitar2"
-          />
-          <h2 className="guitar9-brand">{props.guitar9Brand}</h2>
-          <p className="guitar9-price">{props.guitar9Price}</p>
+          <h2 className="guitar8-brand">ESTEVE 8F</h2>
+          <p className="guitar8-price">10000kr</p>
+          <Button
+            className="add-to-cart-btn"
+            variant="success"
+            onClick={increment1}
+          >
+            +{" "}
+          </Button>
+          <Button
+            className="remove-from-cart-btn"
+            variant="danger"
+            onClick={decrement}
+          >
+            -{" "}
+          </Button>
         </div>
       </div>
     </>
