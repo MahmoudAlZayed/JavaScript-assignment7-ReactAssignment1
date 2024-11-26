@@ -1,13 +1,24 @@
+import { TbGuitarPick } from "react-icons/tb";
+import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Map from "../assets/Map.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.png";
-import Header from "../components/navbar";
+import React from "react";
+import { SwatchesPicker } from "react-color";
 
-function TextControlsExample() {
+function GuitarPicks() {
+  let [color, setColor] = useState("");
+  let [hide, setHide] = useState(false);
+
+  // const change = (color) => {
+  //   setColor(color);
+  // };
+  useEffect(() => {
+    document.getElementById("pick").style.color = color;
+  }, [color]);
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -32,31 +43,24 @@ function TextControlsExample() {
         </Container>
       </Navbar>
 
-      <Form className="form">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            className="email-input"
-            type="email"
-            placeholder="Enter email"
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Message</Form.Label>
-          <Form.Control className="message-input" type="text" />
-        </Form.Group>
-
-        <Button className="send-msg-btn" variant="primary" type="submit">
-          Send
+      <div className="guitar-picks">
+        <TbGuitarPick id="pick" className="pick1" />
+        <Button
+          className="changeColor-btn"
+          button
+          variant="secondary"
+          onClick={() => setHide(!hide)}
+        >
+          {hide ? "Close color picker" : "open color picker"}
         </Button>
-      </Form>
-      <img className="map-img" src={Map} />
+        {hide && (
+          <SwatchesPicker
+            className="changeColor"
+            onChange={(updateColor) => setColor(updateColor.hex)}
+          />
+        )}
+      </div>
     </>
   );
 }
-
-export default TextControlsExample;
+export default GuitarPicks;

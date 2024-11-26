@@ -1,7 +1,6 @@
 .logo {
   text-align: center;
 }
-
 .guitars {
   display: flex;
   flex-wrap: wrap;
@@ -105,4 +104,16 @@
   max-width: 100px;
   width: 100%;
   margin: auto;
+}
+.guitar-picks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  align-items: center;
+}
+.pick1 {
+  font-size: 700px;
+  display: block;
 }

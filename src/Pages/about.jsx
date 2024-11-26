@@ -4,7 +4,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.png";
 
+import Header from "../components/navbar";
+
+
+
 function About() {
+
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -16,6 +22,8 @@ function About() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="guitar-picks">Guitar-picks</Nav.Link>
+
               <Nav.Link href="about">about</Nav.Link>
             </Nav>
             <Nav>
@@ -26,6 +34,7 @@ function About() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+ 
 
       <img className="about-us-image" src={aboutImg} alt="flamecno-guitar" />
       <div class="about-us-content">
