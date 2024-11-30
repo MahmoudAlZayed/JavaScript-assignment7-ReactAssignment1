@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.png";
-import Header from "../components/navbar";
 
 function TextControlsExample() {
   return (
@@ -20,6 +19,7 @@ function TextControlsExample() {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="guitar-picks">Guitar-picks</Nav.Link>
+              <Nav.Link href="ToBuylist">To Buy List</Nav.Link>
 
               <Nav.Link href="about">about</Nav.Link>
             </Nav>
@@ -41,7 +41,7 @@ function TextControlsExample() {
             placeholder="Enter email"
           />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            We will never share your email with anyone else.
           </Form.Text>
         </Form.Group>
 

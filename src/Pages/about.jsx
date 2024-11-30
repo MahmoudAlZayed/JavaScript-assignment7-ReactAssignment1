@@ -4,13 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.png";
 
-import Header from "../components/navbar";
-
-
-
 function About() {
-
-
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -23,6 +17,7 @@ function About() {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="guitar-picks">Guitar-picks</Nav.Link>
+              <Nav.Link href="ToBuyList">To Buy List</Nav.Link>
 
               <Nav.Link href="about">about</Nav.Link>
             </Nav>
@@ -34,10 +29,9 @@ function About() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
- 
 
       <img className="about-us-image" src={aboutImg} alt="flamecno-guitar" />
-      <div class="about-us-content">
+      <div className="about-us-content">
         <h2>Our history</h2>
         <h3>Our history The heritage of the Luthier</h3>
         <p>
@@ -51,7 +45,7 @@ function About() {
           construction of the instrument.
         </p>
         <p>
-          <b>ESTEVE</b>'s team of 52 artisans is our greatest asset. Our
+          <b>ESTEVE</b>s team of 52 artisans is our greatest asset. Our
           craftsmen share a common passion for the guitar and years of
           experience . We love our work and are proud of each instrument we
           finish!

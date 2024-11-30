@@ -5,12 +5,9 @@ import guitar4 from "../assets/guitar4.jpg";
 import guitar6 from "../assets/guitar6.jpg";
 import guitar7 from "../assets/guitar7.jpg";
 import guitar8 from "../assets/guitar8.jpg";
-import { useState, createContext } from "react";
-// export const quantity = createContext ();
-// export const setQuantity = createContext ();
+import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
-import Header from "./navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -18,9 +15,7 @@ import logo from "../assets/logo.png";
 
 import "/guitars.css";
 
-
-function Guitar(props) {
-  
+function Guitar() {
   let [quantity1, setQuantity1] = useState(0);
 
   const increment1 = () => {
@@ -45,6 +40,7 @@ function Guitar(props) {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="guitar-picks">Guitar-picks</Nav.Link>
+              <Nav.Link href="ToBuyList">To Buy List</Nav.Link>
 
               <Nav.Link href="about">about</Nav.Link>
             </Nav>
@@ -71,19 +67,6 @@ function Guitar(props) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* <quantity.Provider 
-      
-      value = {[quantity1, setQuantity1]} >
-        <Header quantity1 ={quantity1} 
-                setQuantity1={setQuantity1}
-                
-        />
-        
-        </quantity.Provider>
-         */}
-       
-
-        
 
       <div className="guitars">
         <div className="guitar1-container guitar-container ">
@@ -271,8 +254,6 @@ function Guitar(props) {
           </Button>
         </div>
       </div>
-      
-
     </>
   );
 }

@@ -132,3 +132,44 @@
   font-size: 700px;
   display: block;
 }
+
+.to-buy-list {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.to-buy-list h1 {
+  text-align: center;
+}
+.to-buy-list .input-addBtn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+.to-buy-list .input-addBtn-container .add-button {
+  max-width: 200px;
+  width: 100%;
+  min-height: 38px;
+  font-size: 17px;
+  display: inline;
+}
+.to-buy-list .list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.to-buy-list .text {
+  font-size: 30px;
+  color: rgb(40, 56, 56);
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
